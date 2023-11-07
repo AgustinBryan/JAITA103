@@ -76,5 +76,32 @@ public class BinarySearch {
             System.out.println("Element found at index: " + position);
     }
 
+    java public class RicercaBinaria { 
+      public static void main(String[] args) { 
+        int[] array = {2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40}; 
+        int target = 28; 
+        int indice = ricercaBinaria(array, target); 
+        if (indice != -1) { 
+          System.out.println("Elemento trovato all'indice " + indice); 
+          } else { System.out.println("Elemento non trovato");
+          }
+        } 
+      public static int ricercaBinaria
+      (int[] array, int target) { 
+        int sinistra = 0; 
+        int destra = array.length - 1; 
+        while (sinistra <= destra) { 
+          int centro = (sinistra + destra) / 2; 
+          if (array[centro] == target) { 
+            return centro;
+          } if (array[centro] < target) { 
+            sinistra = centro + 1; 
+          } else { destra = centro - 1; 
+          }
+        } 
+        return -1; 
+      } 
+    }
+
 }
 
