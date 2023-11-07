@@ -1,3 +1,5 @@
+import java.time.DayOfWeek;
+import java.time.LocalDate;
 public class Methods {
     public static int numero = 0;
 
@@ -7,7 +9,7 @@ public class Methods {
        System.out.println(numero);
        quadrato();
        //200 righe dopo
-       chiediCpsaVuoiFareOggi();
+       chiediCosaVuoiFareOggi();
        LocalDate oggi = LocalDate.now();
        DayOfWeek giorno = oggi.getDayOfWeek();
     }
@@ -18,18 +20,25 @@ public class Methods {
         System.out.println(giorno);
          return giorno;
     }
-       LocalDate giorno = LocalDate.now();
-       System.out.println(giorno);
-       System.out.println("Cosa desideri oggi?");
-
-       LocalDate giorno = LocalDate.now();
-       System.out.println(giorno200);
-       System.out.println("Cosa desideri oggi?");
+    public static void printNumberAndReturn(int n, int b){
+        System.out.println("Il primo valore passato è: "+n);
+        System.out.println("Il secondo valore passato è: "+b);
+        System.out.println("la somma de");
     }
-    public static ("chiediCosaVuoiFareOggi"){
-
+    public static DayOfWeek giornoSettimana(){
+        LocalDate oggi = LocalDate.now();
+        DayOfWeek giorno = oggi.getDayOfWeek();
+        return giorno;
+    }   
+       
+    
+    public static void chiediCosaVuoiFareOggi(){
+        LocalDate giorno = LocalDate.now();
+        System.out.println(giorno);
+        System.out.println("cosa ti piacerebbe oggi?");
     }
 
+    
     public static int multiply(){
         return 4*3;
     }
